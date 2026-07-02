@@ -22,8 +22,8 @@ setup_RHEL ()
 
 if is_user_root;
 then (
-  if [[ -e /etc/almalinux-release || -e /etc/rocky-release || -e /etc/centos-release || -e /etc/fedora-release || $FORCE_RHEL]]; then
-    setup_RHEL
+  if [[ -e /etc/almalinux-release || -e /etc/rocky-release || -e /etc/centos-release || -e /etc/fedora-release || $FORCE_RHEL ]]; then
+    setup_RHEL;
   else
     echo "Not supported system."
   fi;
