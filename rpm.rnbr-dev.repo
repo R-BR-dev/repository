@@ -1,0 +1,7 @@
+[rnbr-dev-rpm-repo]
+name=R&BR-dev repository
+baseurl=https://repo.rnbr-dev.com/rpm/
+enabled=1
+gpgcheck=1 
+repo_gpgcheck=1 
+gpgkey=https://repo.rnbr-dev.com/rpm/repo-key.asc
