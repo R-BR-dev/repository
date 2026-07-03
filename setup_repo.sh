@@ -13,7 +13,7 @@ setup_RHEL ()
   wget_installed=0
   which wget 2>/dev/null 1>/dev/null && wget_installed=1
   if [ $wget_installed == 1 ]; then
-    wget $url -o $repo_file
+    wget $url -O $repo_file
   else
     curl -fsSL $url -o $repo_file
   fi;
@@ -29,7 +29,7 @@ setup_DEB ()
   wget_installed=0
   which wget 2>/dev/null 1>/dev/null && wget_installed=1
   if [ $wget_installed == 1 ]; then
-    wget $url -o $repo_file
+    wget $url -O $repo_file
   else
     curl -fsSL $url -o $repo_file
   fi;
@@ -41,7 +41,7 @@ then (
   if [[ -e /etc/almalinux-release || -e /etc/rocky-release || -e /etc/centos-release || -e /etc/fedora-release || $FORCE_RHEL ]]; then
     setup_RHEL;
   elif [[ -e /etc/debian_version || $FORCE_DEB ]]; then
-    setup_DEB;
+  setup_DEB;
   else
     echo "Not supported system."
   fi;
