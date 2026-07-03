@@ -1,0 +1,5 @@
+Types: deb
+URIs: https://repo.rnbr-dev.com/deb/
+Suites: stable
+Components: main
+Signed-By: /etc/apt/keyrings/repo.rnbr_dev.gpg
