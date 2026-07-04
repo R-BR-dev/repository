@@ -21,6 +21,8 @@ setup_RHEL ()
 
 setup_DEB ()
 {
+  apt-get update
+  apt-get install gpg -y
   curl -fsSL https://repo.rnbr-dev.com/rpm/repo-key.asc \
     | gpg --dearmor -o /etc/apt/keyrings/repo.rnbr_dev.gpg
   
