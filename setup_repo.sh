@@ -25,6 +25,7 @@ setup_DEB ()
   apt-get install gpg -y
   curl -fsSL https://repo.rnbr-dev.com/rpm/repo-key.asc \
     | gpg --dearmor -o /etc/apt/keyrings/repo.rnbr_dev.gpg
+  chmod 644 /etc/apt/keyrings/repo.rnbr_dev.gpg
   
   url="https://raw.githubusercontent.com/R-BR-dev/repository/refs/heads/main/deb.rnbr-dev.repo.sources"
   repo_file="/etc/apt/sources.list.d/deb.rnbr-dev.repo.sources"
